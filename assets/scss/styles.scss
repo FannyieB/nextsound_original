@@ -1,3 +1,10 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+
 /* reset   ****************************************   */
 
 * {
@@ -11,9 +18,31 @@ body {
     width : 100vw;  
 }
 
+
+
 /* variables   ************************************  */
 
 
+
+
+
+
+/* mixins   ************************************  */
+
+@mixin typo-menu {    
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    font-weight: lighter;
+}
+
+
+@mixin typo-title-nextsound {
+    color: white;
+    font-family: "Crimson+pro", sans-serif;
+    font-size: 4rem;
+
+}
 
 
 /*Header *******************************************   */
@@ -26,28 +55,35 @@ body {
 
 .header_top {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     border: dashed 7px rgb(148, 171, 16);    
-    height: 9vh;    
-        div {
-            width: calc(100%/3);
-    }
-    margin: 0 10%;       
+    height: 10vh;    
+    margin: 0 10%;
+        
 }
+
 
 
 .menu {
     display: flex;
-    justify-content:flex-end;   
-    
+    justify-content: space-between; 
+    border: dashed 5px rgb(243, 136, 136);
+    width: 50%;
+    @include typo-menu; 
 }
 
 
 .ctas_header {
     display: flex;
-    justify-content: flex-end;    
+    justify-content: space-between;
+    border: dashed 5px rgb(232, 54, 54); 
+    width: 20%;
+    @include typo-menu; 
+       
 }
+
+
 
 
 .header_bottom {
@@ -73,6 +109,9 @@ body {
     
 }
 
+.header_slogan {
+    @include typo-title-nextsound;
+}
 
 /*Section 1: écoute*******************************************   */
 .ecoute_container {
@@ -234,8 +273,7 @@ body {
     flex-wrap: wrap;   
     border: dashed 7px rgb(242, 20, 209);    
     margin: 0 15%;
-    padding: 2%;
-    box-sizing: border-box;     
+    padding: 2%;     
 }
 
 .cta_audio {
@@ -259,10 +297,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    border: dashed 5px rgb(242, 96, 244);
-    padding: 0 10% 0 5%;
+    border: dashed 5px rgb(242, 96, 244);       
     height: 100%;
-    padding: 0 10% 5% 5%;
+    padding: 0 11% 0 5%;
     
 }
 
