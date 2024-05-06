@@ -1,0 +1,11 @@
+{
+  "name": "nextsound",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {    
+    "watch": "sass assets/scss/styles.scss assets/css/styles.css --watch" 
+  },
+  "author": "",
+  "license": "ISC"
+}

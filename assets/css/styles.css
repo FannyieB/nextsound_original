@@ -1,0 +1,234 @@
+@charset "UTF-8";
+/* reset   ****************************************   */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+
+/* variables   ************************************  */
+/*Header *******************************************   */
+.header_container {
+  background-color: #324A5F;
+  color: white;
+}
+
+.header_top {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: dashed 7px rgb(148, 171, 16);
+  height: 9vh;
+  margin: 0 10%;
+}
+.header_top div {
+  width: 33.3333333333%;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ctas_header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header_bottom {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10%;
+  border: dashed 7px rgb(249, 223, 58);
+  margin: 0 10%;
+}
+
+.header_bottom_img {
+  border: solid 10px rgb(241, 55, 195);
+  object-fit: cover;
+  width: 100%;
+}
+
+.header_slogan_container {
+  border: solid 10px rgb(101, 10, 96);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/*Section 1: écoute*******************************************   */
+.ecoute_container {
+  background-color: #0C1B21;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top_ecoute_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10%;
+}
+
+.icone_ecoute {
+  margin: 0 auto;
+}
+
+.triplecards_ecoute_container {
+  display: flex;
+  justify-content: center;
+  border: solid 10px rgb(238, 232, 48);
+  margin: 0 10%;
+}
+.triplecards_ecoute_container div {
+  width: 33.3333333333%;
+}
+
+.container_card1_ecoute {
+  border: dashed 10px rgb(48, 209, 238);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.container_card2_ecoute {
+  border: dashed 10px rgb(194, 48, 238);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.container_card3_ecoute {
+  border: dashed 10px rgb(237, 114, 20);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/*Section 2: abonnement*******************************************   */
+.abonnement_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #5FB0B7;
+}
+
+.top_abonnement_container {
+  margin: 0 10%;
+  border: solid 10px rgb(200, 45, 45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.maxi_card_abonnement {
+  display: flex;
+  justify-content: center;
+  border: solid 10px rgb(127, 10, 10);
+  margin: 0 10%;
+}
+.maxi_card_abonnement div {
+  width: 50%;
+}
+
+.maxi_card_img {
+  border: dashed 7px yellowgreen;
+  object-fit: cover;
+}
+
+.maxi_card_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: dashed 7px rgb(31, 42, 8);
+}
+
+/*Section 3: audio_albums*******************************************   */
+.audio_container {
+  background-color: #0C1B21;
+  color: white;
+}
+
+.top_audio_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards_container {
+  display: flex;
+  justify-content: center;
+  align-items: space-around;
+  flex-wrap: wrap;
+  border: dashed 7px rgb(242, 20, 209);
+  margin: 0 10%;
+  padding: 2%;
+  box-sizing: border-box;
+}
+
+/*Section 4: inscription*******************************************   */
+.subscription_container {
+  display: flex;
+  background-color: #8DE969;
+}
+.subscription_container div {
+  width: 50%;
+}
+.subscription_container .subscription_left_img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.subscription_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/*Section 5: footer*******************************************   */
+.footer_container {
+  background-color: #0C1B21;
+  color: white;
+}
+
+.footer_subcontainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10%;
+}
+.footer_subcontainer div {
+  width: 33.3333333333%;
+}
+.footer_subcontainer .footer_center_img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.footer_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: dashed 7px rgb(227, 224, 43);
+}
+
+.footer_title {
+  font-size: 2rem;
+}
+
+.footer_center {
+  border: dashed 7px rgb(53, 202, 247);
+}
+
+.footer_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: dashed 7px rgb(91, 248, 43);
+}
+
+/*# sourceMappingURL=styles.css.map */
