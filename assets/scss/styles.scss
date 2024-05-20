@@ -15,41 +15,164 @@
 
 
 body {
-    width : 100vw;  
+    width : 100vw;
+    color: rgb(255, 255, 255);  
 }
 
 
 
 /* variables   ************************************  */
 
+$lightgreenBtn : #8DE969;
 
+$darkGrey : #333333;
 
-
-
+$richBlack: #0C1B21;
 
 /* mixins   ************************************  */
 
-@mixin typo-menu {    
-    color: rgb(213, 24, 24);
+@mixin font_navbar_menu {        
     font-family: "Montserrat", sans-serif;
-    font-size: 2rem;
+    font-size: 0.75rem;
     font-weight: lighter;
 }
 
 
-@mixin typo-title-nextsound {
-    color: rgb(255, 255, 255);
+@mixin font_title_nextsound {    
     font-family: "Crimson+pro", sans-serif;
-    font-size: 4rem;
-
+    font-size: 3rem;
+    font-weight: bold;
 }
+
+@mixin font_content_header_slogan {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;    
+}
+
+@mixin h3_sous_titre {
+    font-family: "Crimson+Pro", sans-serif;
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin: 5% 0;
+}
+
+@mixin paragraphe {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem; 
+    line-height: 1.5rem;    
+}
+
+
+@mixin maxi_card_text1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.125rem; 
+    line-height: 1.7rem;
+    font-weight: lighter;
+}
+
+
+@mixin maxi_card_text2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.875rem; 
+    font-weight: lighter;
+    font-style: italic;
+}
+
+@mixin lightgreenBtn_text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.125rem;     
+    font-weight: bold;
+    padding: 2% 4%;
+    
+}
+
+@mixin btnShadow {
+    box-shadow: 0 4px  rgba(0,0,0,0.25);
+}       
+
+@mixin btn_cta_audioTxt {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 0.75% 1%; 
+}
+
+
+
+@mixin XS_inscription {
+    font-family: "Montserrat", sans-serif;    
+    font-size: 0.875rem; 
+    font-weight: regular;
+    font-style: italic;
+}
+
+@mixin txt_essai {
+    font-family: "Montserrat", sans-serif;    
+    font-size: 1.5rem; 
+    font-weight: regular; 
+    color: black;  
+}
+
+
+@mixin txt_placeholder {
+    font-family: "Montserrat", sans-serif;    
+    font-size: 1.5rem; 
+    font-weight: regular; 
+    color: rgba(0,0,0,0.25);
+    padding-left: 3%; 
+}
+
+
+@mixin footer_right_txt {
+    font-family: "Montserrat", sans-serif;    
+    font-size: 1.25rem; 
+    font-weight: regular; 
+}
+
+
+@mixin cta_blueBtn {
+    font-family: "Montserrat", sans-serif;    
+    font-size: 1.25rem; 
+    font-weight: regular; 
+    color: white;
+    background-color: #324A5F;
+    padding: 1.5% 2%;
+    border-radius: 5px;
+}
+
+
+/*Typographie sous titres et paragraphes *******************************************   */
+
+h3 {
+    @include  h3_sous_titre;
+}
+
+
+.p16px {
+    @include paragraphe;
+}
+
+
+.maxi_card_text1 {
+ @include maxi_card_text1;
+ 
+}
+
+.span_bold {
+    font-weight: 600;  
+}
+
+.maxi_card_text2 {
+    @include maxi_card_text2;
+}
+
 
 
 /*Header *******************************************   */
 
 .header_container {
     background-color: #324A5F;
-    color: white;     
+       
 }
 
 
@@ -70,7 +193,7 @@ body {
     justify-content: space-between; 
     border: dashed 5px rgb(243, 136, 136);
     width: 50%;
-    @include typo-menu; 
+    @include font_navbar_menu; 
 }
 
 
@@ -79,44 +202,77 @@ body {
     justify-content: space-between;
     border: dashed 5px rgb(232, 54, 54); 
     width: 20%;
-    @include typo-menu; 
+    @include font_navbar_menu; 
        
 }
+
+.se_connecter {
+@include cta_blueBtn;
+font-size: 0.75rem;
+background-color: #1B2A41;
+}
+
+.s_enregistrer {
+    @include cta_blueBtn;
+    font-size: 0.75rem;    
+    background-color: #5FB0B7;
+    }
+    
 
 
 
 
 .header_bottom {
     display: flex;
-    justify-content: flex-start;
+    justify-content: stretch;
     gap:10%;
     border: dashed 7px rgb(249, 223, 58);
-    margin: 0 10%;
+    margin: 0 10%;    
 }
 
 .header_bottom_img {
     border: solid 10px rgb(241, 55, 195);
     object-fit: cover;
+    height: 584px;
     width: 100%;
+    position: relative;
 }
 
 
 .header_slogan_container {
-    border: solid 10px rgb(101, 10, 96);
+    border: solid 10px rgb(207, 175, 205);
+    width: 800px;
+    height: 407px;    
     display: flex;
     flex-direction: column;    
     justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    top: 180px;
     
 }
 
 .header_slogan {
-    @include typo-title-nextsound;
+    @include font_title_nextsound;
+    margin-bottom: 5%;
 }
+
+
+.content_header_slogan {
+    @include font_content_header_slogan;
+}
+
+
+.bold_content_header  {
+    @include font_content_header_slogan;
+    font-weight: 600;  
+    
+}
+
 
 /*Section 1: écoute*******************************************   */
 .ecoute_container {
-    background-color: #0C1B21;
-    color: white;
+    background-color: #0C1B21;   
     display: flex;  
     flex-direction: column;
     align-items: center;
@@ -126,19 +282,24 @@ body {
 .top_ecoute_container {    
     display: flex;  
     flex-direction: column;
-    align-items: center;
-    margin: 0 10%;
+    align-items: center; 
     
 }
 
 
 .icone_ecoute {
-  margin: 0 auto;  
-}
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+    img {
+        object-fit: cover;
+        width: 100%;
+        }   
+   }
 
 
 .container_ecoute_slogan h3 {
-    padding: 8% 0;
+    padding: 3% 0;
 }
 
 
@@ -146,12 +307,12 @@ body {
     display: flex;
     justify-content: space-between;
     border: solid 10px rgb(238, 232, 48);
-    width: 60%;
+    width: 1000px;    
    
-    div {
-        width: calc(100%/3);
-    }     
-}
+        div {
+            width: calc(100%/3);
+        } 
+    }
 
 .container_card1_ecoute {
     border: dashed 10px rgb(48, 209, 238);
@@ -164,6 +325,7 @@ body {
         img {
             object-fit: cover;
             width: 100%;
+            margin-bottom:4%;
         }     
 }
 
@@ -178,6 +340,7 @@ body {
         img {
             object-fit: cover;
             width: 100%;
+            margin-bottom:4%;
         }  
  }
 
@@ -193,16 +356,31 @@ body {
         img {
             object-fit: cover;
             width: 100%;
+            margin-bottom:4%;
         }    
  }
 
 /*Section 2: abonnement*******************************************   */
+
+.dollar_icone {
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+    }   
+}
+  
+
+
 .abonnement_container  {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #5FB0B7;
-    padding: 3% 0;  
+    padding: 3%0;  
 }
 
 .top_abonnement_container {
@@ -214,7 +392,7 @@ body {
 }
 
 .container_abonnement_slogan h3{
-    padding: 8% 0;
+    padding: 3% 0;
 }
 
 
@@ -239,18 +417,39 @@ body {
     justify-content: space-around;
     align-items: flex-start;
     border: dashed 7px rgb(31, 42, 8);
-    padding: 0 3%;
+    padding-left: 6%;
+   
+}
+
+
+.cta_abonnement {
+    background-color:  $lightgreenBtn;
+    @include lightgreenBtn_text;
+    border: none; 
+    border-radius: 5px;
+    @include btnShadow ;
 }
 
 /*Section 3: audio_albums*******************************************   */
+
+.audio_album_icone {
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+    }   
+}
+
 
 .audio_container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #0C1B21;
-    color: white;
+    background-color: #0C1B21;   
     padding: 3% 0;
 
 }
@@ -263,21 +462,32 @@ body {
 }
 
 .audio_container h3{
-    padding: 8% 0;
+    padding: 3% 0;
 }
 
 .cards_container{     
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: space-around;
-    flex-wrap: wrap;   
-    border: dashed 7px rgb(242, 20, 209);    
-    margin: 0 15%;
-    padding: 2%;     
+    flex-wrap: wrap;
+    row-gap: 2% ;
+    column-gap: 2%;;   
+    border: dashed 7px rgb(242, 20, 209);
+    padding: 5% 0;
+    height: 100%;      
+    width: 1100px;
+   
+       
 }
 
 .cta_audio {
     margin: 2% 0;
+    background-color:  $lightgreenBtn;
+    border: none; 
+    border-radius: 5px;
+    @include btn_cta_audioTxt;  
+    
+    
 }
 
 
@@ -297,13 +507,41 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    border: dashed 5px rgb(242, 96, 244);       
-    height: 100%;
-    padding: 0 11% 0 5%;
+    align-items: flex-end; 
+    border: dashed 5px rgb(242, 96, 244);
+         
+    height: 100%;      
+    padding: 2% 8% 5% 2%;
+    width: 100%x;
     
 }
 
+form {
+    width: 100%;    
+}
 
+.subscription_right>h2 {
+    @include font_title_nextsound;
+    color: $richBlack;
+    text-align: left;
+}
+
+.essai {
+@include txt_essai;
+}
+
+input[placeholder] {
+    border-radius: 20px;
+    margin: 2% 0;
+    @include txt_placeholder;
+}
+
+
+.placeholderTxt {    
+    width : 100%;
+    height: 77px;
+        
+}
 
 .maxi_card_inscription {
     display: flex;
@@ -316,6 +554,23 @@ body {
     
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.cta_inscription {
+    margin : 2% 0;
+    @include cta_blueBtn;
+}
+
+
+.text_XS_inscription  {
+    @include XS_inscription;
+    color: $darkGrey;
+}
 
 
 /*Section 5: footer*******************************************   */
@@ -324,6 +579,10 @@ body {
     background-color: #0C1B21;
     color: white;
     padding: 3% 0; 
+}
+
+.footer_title {
+@include font_title_nextsound;
 }
 
 .footer_subcontainer {
@@ -366,4 +625,6 @@ body {
     flex-direction: column;
     justify-content: space-around;
     border: dashed 7px rgb(91, 248, 43); 
+    @include footer_right_txt;
 }
+
