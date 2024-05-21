@@ -39,7 +39,7 @@ $richBlack: #0C1B21;
 
 
 @mixin font_title_nextsound {    
-    font-family: "Crimson+pro", sans-serif;
+    font-family: "Crimson+pro", serif;
     font-size: 3rem;
     font-weight: bold;
 }
@@ -475,8 +475,7 @@ background-color: #1B2A41;
     border: dashed 7px rgb(242, 20, 209);
     padding: 5% 0;
     height: 100%;      
-    width: 1100px;
-   
+    width: 1100px;   
        
 }
 
@@ -485,49 +484,51 @@ background-color: #1B2A41;
     background-color:  $lightgreenBtn;
     border: none; 
     border-radius: 5px;
-    @include btn_cta_audioTxt;  
-    
+    @include btn_cta_audioTxt;     
     
 }
 
 
 /*Section 4: inscription*******************************************   */
+
+
+    .subscription_left_img {
+        object-fit: cover;
+        width: 100%;
+            
+    }
+
+
+
 .subscription_container {
     display: flex;
     justify-content: center;   
     background-color: #8DE969;
-    
-    .subscription_left_img {
-        object-fit: cover;
-        width: 100%;        
-    }
+       
 }
 
 .subscription_right {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-end; 
-    border: dashed 5px rgb(242, 96, 244);
-         
+    justify-content: center;
+    align-items: flex-start;             
     height: 100%;      
-    padding: 2% 8% 5% 2%;
-    width: 100%x;
+    padding: 0% 8% 0% 5%;
+    width: 560px;
     
 }
 
-form {
-    width: 100%;    
-}
 
 .subscription_right>h2 {
     @include font_title_nextsound;
     color: $richBlack;
     text-align: left;
+    
 }
 
 .essai {
 @include txt_essai;
+padding: 4% 0;
 }
 
 input[placeholder] {
@@ -539,7 +540,7 @@ input[placeholder] {
 
 .placeholderTxt {    
     width : 100%;
-    height: 77px;
+    height: 70px;
         
 }
 
@@ -547,7 +548,7 @@ input[placeholder] {
     display: flex;
     justify-content: center;
     align-items: center;       
-    border: solid 10px rgb(127, 10, 10);
+    
     div {
         width: calc(100%/2);    
     }
@@ -559,17 +560,23 @@ form {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
+    width: 100%;
 }
 
 .cta_inscription {
-    margin : 2% 0;
+    margin: 2% 0 3% 0;
     @include cta_blueBtn;
 }
+
+
 
 
 .text_XS_inscription  {
     @include XS_inscription;
     color: $darkGrey;
+    width: 100%;
+    text-align: justify;
+   
 }
 
 
