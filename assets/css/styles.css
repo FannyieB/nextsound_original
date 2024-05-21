@@ -50,22 +50,21 @@ h3 {
 /*Header *******************************************   */
 .header_container {
   background-color: #324A5F;
+  height: 680px;
 }
 
 .header_top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: dashed 7px rgb(148, 171, 16);
-  height: 10vh;
+  height: 12vh;
   margin: 0 10%;
 }
 
 .menu {
   display: flex;
-  justify-content: space-between;
-  border: dashed 5px rgb(243, 136, 136);
-  width: 50%;
+  justify-content: space-around;
+  width: 30%;
   font-family: "Montserrat", sans-serif;
   font-size: 0.75rem;
   font-weight: lighter;
@@ -74,8 +73,7 @@ h3 {
 .ctas_header {
   display: flex;
   justify-content: space-between;
-  border: dashed 5px rgb(232, 54, 54);
-  width: 20%;
+  width: 22%;
   font-family: "Montserrat", sans-serif;
   font-size: 0.75rem;
   font-weight: lighter;
@@ -91,6 +89,7 @@ h3 {
   border-radius: 5px;
   font-size: 0.75rem;
   background-color: #1B2A41;
+  padding: 4% 5%;
 }
 
 .s_enregistrer {
@@ -103,26 +102,24 @@ h3 {
   border-radius: 5px;
   font-size: 0.75rem;
   background-color: #5FB0B7;
+  padding: 4% 5%;
 }
 
 .header_bottom {
   display: flex;
-  justify-content: stretch;
-  gap: 10%;
-  border: dashed 7px rgb(249, 223, 58);
-  margin: 0 10%;
+  justify-content: center;
+  gap: 0 10%;
 }
 
 .header_bottom_img {
-  border: solid 10px rgb(241, 55, 195);
   object-fit: cover;
-  height: 584px;
+  height: 600px;
   width: 100%;
   position: relative;
+  bottom: 19px;
 }
 
 .header_slogan_container {
-  border: solid 10px rgb(207, 175, 205);
   width: 800px;
   height: 407px;
   display: flex;
@@ -130,7 +127,7 @@ h3 {
   justify-content: center;
   align-items: flex-start;
   position: relative;
-  top: 180px;
+  top: 160px;
 }
 
 .header_slogan {
@@ -157,7 +154,7 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3% 0;
+  padding: 4% 0;
 }
 
 .top_ecoute_container {
@@ -177,13 +174,12 @@ h3 {
 }
 
 .container_ecoute_slogan h3 {
-  padding: 3% 0;
+  margin: 8% 0;
 }
 
 .triplecards_ecoute_container {
   display: flex;
   justify-content: space-between;
-  border: solid 10px rgb(238, 232, 48);
   width: 1000px;
 }
 .triplecards_ecoute_container div {
@@ -191,7 +187,6 @@ h3 {
 }
 
 .container_card1_ecoute {
-  border: dashed 10px rgb(48, 209, 238);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -201,11 +196,10 @@ h3 {
 .container_card1_ecoute img {
   object-fit: cover;
   width: 100%;
-  margin-bottom: 4%;
+  margin-bottom: 7%;
 }
 
 .container_card2_ecoute {
-  border: dashed 10px rgb(194, 48, 238);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -215,11 +209,10 @@ h3 {
 .container_card2_ecoute img {
   object-fit: cover;
   width: 100%;
-  margin-bottom: 4%;
+  margin-bottom: 7%;
 }
 
 .container_card3_ecoute {
-  border: dashed 10px rgb(237, 114, 20);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -230,7 +223,7 @@ h3 {
 .container_card3_ecoute img {
   object-fit: cover;
   width: 100%;
-  margin-bottom: 4%;
+  margin-bottom: 7%;
 }
 
 /*Section 2: abonnement*******************************************   */
@@ -254,7 +247,6 @@ h3 {
 
 .top_abonnement_container {
   margin: 0 10%;
-  border: solid 10px rgb(200, 45, 45);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -267,7 +259,6 @@ h3 {
 .maxi_card_abonnement {
   display: flex;
   justify-content: center;
-  border: solid 10px rgb(127, 10, 10);
   margin: 0 10%;
 }
 .maxi_card_abonnement div {
@@ -275,7 +266,6 @@ h3 {
 }
 
 .maxi_card_img {
-  border: dashed 7px yellowgreen;
   object-fit: cover;
 }
 
@@ -284,7 +274,6 @@ h3 {
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
-  border: dashed 7px rgb(31, 42, 8);
   padding-left: 6%;
 }
 
@@ -334,11 +323,9 @@ h3 {
   justify-content: space-between;
   align-items: space-around;
   flex-wrap: wrap;
-  row-gap: 2%;
   column-gap: 2%;
-  border: dashed 7px rgb(242, 20, 209);
-  padding: 5% 0;
-  height: 100%;
+  padding: 2% 0;
+  height: 500px;
   width: 1100px;
 }
 
@@ -357,12 +344,15 @@ h3 {
 .subscription_left_img {
   object-fit: cover;
   width: 100%;
+  position: relative;
+  top: 3px;
 }
 
 .subscription_container {
   display: flex;
   justify-content: center;
   background-color: #8DE969;
+  height: 513px;
 }
 
 .subscription_right {
@@ -462,7 +452,6 @@ form {
   justify-content: space-around;
   gap: 3%;
   margin: 0 10%;
-  border: dashed 5px coral;
 }
 .footer_subcontainer div {
   width: 33.3333333333%;
@@ -476,22 +465,16 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  border: dashed 7px rgb(227, 224, 43);
 }
 
 .footer_title {
   font-size: 2rem;
 }
 
-.footer_center {
-  border: dashed 7px rgb(53, 202, 247);
-}
-
 .footer_right {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  border: dashed 7px rgb(91, 248, 43);
   font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;
   font-weight: regular;

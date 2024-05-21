@@ -172,7 +172,7 @@ h3 {
 
 .header_container {
     background-color: #324A5F;
-       
+    height:680px;   
 }
 
 
@@ -180,8 +180,8 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: dashed 7px rgb(148, 171, 16);    
-    height: 10vh;    
+       
+    height: 12vh;    
     margin: 0 10%;
         
 }
@@ -190,18 +190,18 @@ h3 {
 
 .menu {
     display: flex;
-    justify-content: space-between; 
-    border: dashed 5px rgb(243, 136, 136);
-    width: 50%;
+    justify-content: space-around;
+     
+    
+    width: 30%;
     @include font_navbar_menu; 
 }
 
 
 .ctas_header {
     display: flex;
-    justify-content: space-between;
-    border: dashed 5px rgb(232, 54, 54); 
-    width: 20%;
+    justify-content: space-between;    
+    width: 22%;
     @include font_navbar_menu; 
        
 }
@@ -210,12 +210,14 @@ h3 {
 @include cta_blueBtn;
 font-size: 0.75rem;
 background-color: #1B2A41;
+padding: 4% 5%;
 }
 
 .s_enregistrer {
     @include cta_blueBtn;
     font-size: 0.75rem;    
     background-color: #5FB0B7;
+    padding: 4% 5%;
     }
     
 
@@ -224,23 +226,22 @@ background-color: #1B2A41;
 
 .header_bottom {
     display: flex;
-    justify-content: stretch;
-    gap:10%;
-    border: dashed 7px rgb(249, 223, 58);
-    margin: 0 10%;    
+    justify-content: center;
+    gap : 0 10%;  
+   
 }
 
-.header_bottom_img {
-    border: solid 10px rgb(241, 55, 195);
+.header_bottom_img {    
     object-fit: cover;
-    height: 584px;
+    height: 600px;
     width: 100%;
     position: relative;
+    bottom: 19px;    
 }
 
 
 .header_slogan_container {
-    border: solid 10px rgb(207, 175, 205);
+    
     width: 800px;
     height: 407px;    
     display: flex;
@@ -248,7 +249,7 @@ background-color: #1B2A41;
     justify-content: center;
     align-items: flex-start;
     position: relative;
-    top: 180px;
+    top: 160px;
     
 }
 
@@ -276,7 +277,7 @@ background-color: #1B2A41;
     display: flex;  
     flex-direction: column;
     align-items: center;
-    padding: 3% 0;
+    padding: 4% 0;
 }
 
 .top_ecoute_container {    
@@ -299,14 +300,14 @@ background-color: #1B2A41;
 
 
 .container_ecoute_slogan h3 {
-    padding: 3% 0;
+    margin: 8%  0;
 }
 
 
 .triplecards_ecoute_container {
     display: flex;
     justify-content: space-between;
-    border: solid 10px rgb(238, 232, 48);
+   
     width: 1000px;    
    
         div {
@@ -315,7 +316,7 @@ background-color: #1B2A41;
     }
 
 .container_card1_ecoute {
-    border: dashed 10px rgb(48, 209, 238);
+    
     display: flex;
     flex-direction: column;    
     align-items: center;
@@ -325,12 +326,12 @@ background-color: #1B2A41;
         img {
             object-fit: cover;
             width: 100%;
-            margin-bottom:4%;
+            margin-bottom:7%;
         }     
 }
 
 .container_card2_ecoute {
-    border: dashed 10px rgb(194, 48, 238);
+   
     display: flex;
     flex-direction: column;    
     align-items: center;
@@ -340,12 +341,12 @@ background-color: #1B2A41;
         img {
             object-fit: cover;
             width: 100%;
-            margin-bottom:4%;
+            margin-bottom:7%;
         }  
  }
 
 .container_card3_ecoute {
-    border: dashed 10px rgb(237, 114, 20);
+   
     display: flex;
     flex-direction: column;
     justify-content: center;    
@@ -356,7 +357,7 @@ background-color: #1B2A41;
         img {
             object-fit: cover;
             width: 100%;
-            margin-bottom:4%;
+            margin-bottom:7%;
         }    
  }
 
@@ -385,7 +386,7 @@ background-color: #1B2A41;
 
 .top_abonnement_container {
     margin: 0 10%;
-    border: solid 10px rgb(200, 45, 45);
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -399,7 +400,7 @@ background-color: #1B2A41;
 .maxi_card_abonnement {
     display: flex;
     justify-content: center;       
-    border: solid 10px rgb(127, 10, 10);
+    
     div {
         width: calc(100%/2);       
     }
@@ -407,7 +408,7 @@ background-color: #1B2A41;
 }
 
 .maxi_card_img {
-    border: dashed 7px yellowgreen;
+    
     object-fit: cover;
 }
  
@@ -416,7 +417,7 @@ background-color: #1B2A41;
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
-    border: dashed 7px rgb(31, 42, 8);
+    
     padding-left: 6%;
    
 }
@@ -470,11 +471,11 @@ background-color: #1B2A41;
     justify-content: space-between;
     align-items: space-around;
     flex-wrap: wrap;
-    row-gap: 2% ;
+   
     column-gap: 2%;;   
-    border: dashed 7px rgb(242, 20, 209);
-    padding: 5% 0;
-    height: 100%;      
+   
+    padding: 2% 0;
+    height: 500px;    
     width: 1100px;   
        
 }
@@ -495,7 +496,8 @@ background-color: #1B2A41;
     .subscription_left_img {
         object-fit: cover;
         width: 100%;
-            
+        position: relative;
+        top: 3px;   
     }
 
 
@@ -504,6 +506,7 @@ background-color: #1B2A41;
     display: flex;
     justify-content: center;   
     background-color: #8DE969;
+    height: 513px;
        
 }
 
@@ -606,7 +609,7 @@ form {
         
     }
     margin: 0 10%;
-    border: dashed 5px coral;    
+   
 }
 
 
@@ -615,15 +618,11 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    border: dashed 7px rgb(227, 224, 43); 
+    
 }
 
 .footer_title {
     font-size: 2rem;
-}
-
-.footer_center {
-    border: dashed 7px rgb(53, 202, 247); 
 }
 
 
@@ -631,7 +630,7 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    border: dashed 7px rgb(91, 248, 43); 
+    
     @include footer_right_txt;
 }
 
