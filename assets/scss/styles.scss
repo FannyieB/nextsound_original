@@ -203,11 +203,24 @@ a[href*="#"] {
     border: 3px solid $lightgreenBtn;
 }
 
+/*Animations & transitions************************  */
+.header_top_logo {
+    transition-property: transform;
+        transition-duration: 400ms;
+        &:hover {
+        transform: scale(1.30);
+        }
+    }
+
+
+
 /*Header *******************************************   */
+
+
 
 .header_container {
     background-color: #324A5F;
-    height:680px;   
+    height:680px;  
 }
 
 
