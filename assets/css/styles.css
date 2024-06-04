@@ -47,6 +47,29 @@ h3 {
   font-style: italic;
 }
 
+a[href*="#"] {
+  color: #FFF;
+}
+
+/*Btn ********************************************** */
+.button:hover {
+  background-color: transparent;
+  border: 3px solid white;
+  border-radius: 5px;
+}
+
+.button-liste-contenu:hover {
+  background-color: wheat;
+  border: 3px solid white;
+  border-radius: 5px;
+}
+
+.cta_audio.hoverBtnListeContenu:hover {
+  background-color: transparent;
+  color: #8DE969;
+  border: 3px solid #8DE969;
+}
+
 /*Header *******************************************   */
 .header_container {
   background-color: #324A5F;

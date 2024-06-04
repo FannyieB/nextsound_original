@@ -20,14 +20,14 @@
 
             <div class="menu">
                 <h4 class="accueil">ACCUEIL</h4>
-                <h4 class="notre_modèle">NOTRE MODELE</h4>
-                <h4 class="pricing">PRICING</h4>
+                <h4 class="notre_modèle"><a href="#ecoute_container">NOTRE MODELE</a></h4>
+                <h4 class="pricing"><a href="#abonnement_container">PRICING</a></h4>
             </div>
         
             
             <div class="ctas_header">
-                <h4 class="se_connecter">SE CONNECTER</h4>
-                <h4 class="s_enregistrer">S'ENREGISTRER</h4>
+                <button class="se_connecter button">SE CONNECTER</button>
+                <button class="s_enregistrer button"><a href="#subscription_container">S'ENREGISTRER</a></button>
             </div>            
         </div>
 
@@ -48,7 +48,7 @@
 
 
     <!--Section 1: écoute-->    
-    <section class="ecoute_container">
+    <section id="ecoute_container" class="ecoute_container">
         <div class="top_ecoute_container">
             <div class="icone_ecoute">
                 <img src="assets\images\Iconicone_ecoute.svg" alt="icone">
@@ -91,7 +91,7 @@
 
 
     <!--Section 2: abonnement--> 
-    <section class="abonnement_container">
+    <section id="abonnement_container" class="abonnement_container">
 
         <div class="top_abonnement_container">
             <div class="dollar_icone_container">             
@@ -114,7 +114,7 @@
                     Un système d'abonnement <span class="span_bold">flexible</span>, <span class="span_bold">un accès illimité</span> à un vaste catalogue de musique pour un plafond mensuel de <span class="span_bold">19.99 euros, incluant 3 membres *</span> de votre famille.
                 </p>
 
-                <button class="cta_abonnement">JE M'ABONNE !</button>
+                <button class="cta_abonnement button">JE M'ABONNE !</button>
 
                 <p class="maxi_card_text2">
                     * Vous souhaitez ajouter davantage d'utilisateurs ? Aucun problème ! Chaque utilisateur supplémentaire ne vous coûtera que 4.99€ de plus par mois.
@@ -128,7 +128,7 @@
 
     <!--Section 3: audio_albums--> 
    
-    <div class="audio_container">
+    <div id="audio_container" class="audio_container">
         <div class="audio_album_icone_container">             
             <img class="audio_album_icone" src="assets\images\audio_album_icone.svg" alt="icone symbole audio">
         </div>
@@ -174,14 +174,12 @@
         </div>
     
 
-        <button class="cta_audio">VOIR LA LISTE DES     CONTENUS
-
-        </button>        
+        <button class="cta_audio button hoverBtnListeContenu">VOIR LA LISTE DES CONTENUS</button>        
     </div>
 
 
     <!--Section 4: inscription--> 
-    <section class="subscription_container">
+    <section id="subscription_container" class="subscription_container">
 
         <div class="maxi_card_inscription">
             <div class="subscription_left">
@@ -193,7 +191,7 @@
                 <p class="essai">Bénéficiez d'un essai de 7 jours gratuit</p>
                 <form action="" method="post">
                     <input type="email" placeholder="john.doe@gmail.com" class="placeholderTxt">
-                    <button class="cta_inscription">INSCRIPTION</button>
+                    <button class="cta_inscription button">INSCRIPTION</button>
                 </form>
 
                 
@@ -224,7 +222,7 @@
                 <p class="footer_right_text1">Mentions légales</p>
                 <p class="footer_right_text2">Politiques relatives aux cookies</p>
                 <p class="footer_right_text3">Politique de confidentialité</p>
-                <p class="footer_right_text4">Téléchargements</p>
+                <p class="footer_right_text4"><a href="#audio_container">Téléchargements</a></p>
                 <p class="footer_right_text5">Contactez-nous</p>
             </div>
         </div>

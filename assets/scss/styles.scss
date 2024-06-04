@@ -29,6 +29,10 @@ $darkGrey : #333333;
 
 $richBlack: #0C1B21;
 
+$linkWhite: #FFF;
+
+
+
 /* mixins   ************************************  */
 
 @mixin font_navbar_menu {        
@@ -141,6 +145,20 @@ $richBlack: #0C1B21;
 }
 
 
+
+@mixin hoverBtn {
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 5px;    
+}
+
+
+@mixin hoverBtnListeContenu {
+    background-color: wheat;
+    border: 3px solid white;
+    border-radius: 5px;
+}
+
 /*Typographie sous titres et paragraphes *******************************************   */
 
 h3 {
@@ -166,7 +184,24 @@ h3 {
     @include maxi_card_text2;
 }
 
+a[href*="#"] {
+    color: $linkWhite;
+}
 
+/*Btn ********************************************** */
+.button:hover {
+    @include hoverBtn;
+}
+
+.button-liste-contenu:hover {
+    @include hoverBtnListeContenu;
+}
+
+.cta_audio.hoverBtnListeContenu:hover {
+    background-color: transparent; 
+    color: $lightgreenBtn; 
+    border: 3px solid $lightgreenBtn;
+}
 
 /*Header *******************************************   */
 
@@ -183,7 +218,7 @@ h3 {
        
     height: 12vh;    
     margin: 0 10%;
-        
+    
 }
 
 
