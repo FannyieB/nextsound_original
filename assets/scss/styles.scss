@@ -1,10 +1,4 @@
 
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
-
-
 /* reset   ****************************************   */
 
 * {
@@ -16,12 +10,18 @@
 
 body {
     width : 100vw;
-    color: rgb(255, 255, 255);  
+    color: rgb(255, 255, 255);    
 }
 
+/* Import Google font ******************************************* */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
 
-/* variables   ************************************  */
+
+/* variables couleurs  ************************************  */
 
 $lightgreenBtn : #8DE969;
 
@@ -33,11 +33,11 @@ $linkWhite: #FFF;
 
 
 
-/* mixins   ************************************  */
+/* mixins couleurs et typos ************************************  */
 
 @mixin font_navbar_menu {        
     font-family: "Montserrat", sans-serif;
-    font-size: 0.75rem;
+    font-size: 0.90rem;
     font-weight: lighter;
 }
 
@@ -46,6 +46,91 @@ $linkWhite: #FFF;
     font-family: "Crimson+pro", serif;
     font-size: 3rem;
     font-weight: bold;
+    animation: Color 4s linear infinite;
+    -webkit-animation: Color 4s ease-in-out infinite;
+    //text-shadow: 10px 10px #F0F0F0;  
+  
+  @keyframes Color{
+    0%{
+      color:#A0D468;
+    }
+    
+    20%{
+      color:#12515f;;
+    }
+    
+    40%{
+      color:#A0D468;
+    }
+    
+    60%{
+      color:#4FC1E9;
+    }
+    
+    80%{
+      color:#A0D468;
+    }
+    
+    100%{
+      color:#4FC1E9;
+    }
+  }
+  
+  @-moz-keyframes Color{
+    0%{
+      color:#A0D468;
+    }
+    
+    20%{
+      color:#4FC1E9;
+    }
+    
+    40%{
+      color:#FFCE54;
+    }
+    
+    60%{
+      color:#FC6E51;
+    }
+    
+    80%{
+      color:#ED5565;
+    }
+    
+    100%{
+      color:#AC92EC;
+    }
+  }
+  
+  @-webkit-keyframes Color{
+    0%{
+      color:#A0D468;
+    }
+    
+    20%{
+      color:#4FC1E9;
+    }
+    
+    40%{
+      color:#A0D468;
+    }
+    
+    60%{
+      color:#4FC1E9;
+    }
+    
+    80%{
+      color:#A0D468;
+    }
+    
+    100%{
+      color:#AC92EC;
+    }
+  }
+  
+  
+  
+  
 }
 
 @mixin font_content_header_slogan {
@@ -188,7 +273,7 @@ a[href*="#"] {
     color: $linkWhite;
 }
 
-/*Btn ********************************************** */
+/*Boutons ********************************************** */
 .button:hover {
     @include hoverBtn;
 }
@@ -204,43 +289,36 @@ a[href*="#"] {
 }
 
 /*Animations & transitions************************  */
-.header_top_logo {
+.header_top_logo, .header_slogan, .footer_title  {
     transition-property: transform;
         transition-duration: 400ms;
         &:hover {
         transform: scale(1.30);
-        }
     }
+}
 
+/* STRUCTURE DE LA PAGE****************************** */
 
-
-/*Header *******************************************   */
-
-
+/*Header *******************************************  */
 
 .header_container {
     background-color: #324A5F;
-    height:680px;  
+    height:683px;   
 }
 
 
 .header_top {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-       
+    justify-content: space-around;
+    align-items: center;       
     height: 12vh;    
-    margin: 0 10%;
-    
+    margin: 0 7%;    
 }
-
 
 
 .menu {
     display: flex;
-    justify-content: space-around;
-     
-    
+    justify-content: space-between;   
     width: 30%;
     @include font_navbar_menu; 
 }
@@ -250,8 +328,7 @@ a[href*="#"] {
     display: flex;
     justify-content: space-between;    
     width: 22%;
-    @include font_navbar_menu; 
-       
+    @include font_navbar_menu;        
 }
 
 .se_connecter {
@@ -266,44 +343,56 @@ padding: 4% 5%;
     font-size: 0.75rem;    
     background-color: #5FB0B7;
     padding: 4% 5%;
-    }
+}
     
-
-
-
 
 .header_bottom {
     display: flex;
+    justify-content: flex-start;  
+}
+
+/* Style pour l'élément .header_bottom_iphone */
+.header_bottom_iphone { 
+    display: flex;
     justify-content: center;
-    gap : 0 10%;  
-   
-}
-
-.header_bottom_img {    
-    object-fit: cover;
-    height: 600px;
+    align-items: center;         
+    object-fit: cover;   
     width: 100%;
-    position: relative;
-    bottom: 19px;    
+    transition: transform 400ms;
 }
 
 
-.header_slogan_container {
-    
+/* Définition de l'animation */
+@keyframes horizontal-shaking {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(10px); }
+    50% { transform: translateX(-5px); }
+    75% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
+
+
+/* Animation appliquée lors du hover */
+.header_bottom_iphone:hover {
+    animation: horizontal-shaking 0.4s ease-in-out;
+}
+
+
+.header_slogan_container {    
     width: 800px;
-    height: 407px;    
+    height: 480px;    
     display: flex;
     flex-direction: column;    
     justify-content: center;
     align-items: flex-start;
     position: relative;
     top: 160px;
-    
+    margin: 0 19% 0 0 ;   
 }
 
 .header_slogan {
     @include font_title_nextsound;
-    margin-bottom: 5%;
+    margin-bottom: 6%;
 }
 
 
@@ -315,7 +404,6 @@ padding: 4% 5%;
 .bold_content_header  {
     @include font_content_header_slogan;
     font-weight: 600;  
-    
 }
 
 
@@ -331,8 +419,7 @@ padding: 4% 5%;
 .top_ecoute_container {    
     display: flex;  
     flex-direction: column;
-    align-items: center; 
-    
+    align-items: center;    
 }
 
 
@@ -344,7 +431,7 @@ padding: 4% 5%;
         object-fit: cover;
         width: 100%;
         }   
-   }
+}
 
 
 .container_ecoute_slogan h3 {
@@ -357,14 +444,12 @@ padding: 4% 5%;
     justify-content: space-between;
    
     width: 1000px;    
-   
         div {
             width: calc(100%/3);
         } 
     }
 
 .container_card1_ecoute {
-    
     display: flex;
     flex-direction: column;    
     align-items: center;
@@ -375,11 +460,14 @@ padding: 4% 5%;
             object-fit: cover;
             width: 100%;
             margin-bottom:7%;
-        }     
+        } 
+        transition-property: transform;
+        transition-duration: 400ms;
+        &:hover {
+        transform: scale(1.1);
+    }        
 }
-
 .container_card2_ecoute {
-   
     display: flex;
     flex-direction: column;    
     align-items: center;
@@ -390,11 +478,15 @@ padding: 4% 5%;
             object-fit: cover;
             width: 100%;
             margin-bottom:7%;
-        }  
+        } 
+        transition-property: transform;
+        transition-duration: 400ms;
+        &:hover {
+        transform: scale(1.1);
+    }        
  }
 
 .container_card3_ecoute {
-   
     display: flex;
     flex-direction: column;
     justify-content: center;    
@@ -406,9 +498,13 @@ padding: 4% 5%;
             object-fit: cover;
             width: 100%;
             margin-bottom:7%;
-        }    
- }
-
+        } 
+        transition-property: transform;
+        transition-duration: 400ms;
+        &:hover {
+        transform: scale(1.1);
+    }        
+}
 /*Section 2: abonnement*******************************************   */
 
 .dollar_icone {
@@ -429,12 +525,12 @@ padding: 4% 5%;
     flex-direction: column;
     align-items: center;
     background-color: #5FB0B7;
-    padding: 3%0;  
+    padding: 3%;
+    scroll-margin-top: 120%;  
 }
 
 .top_abonnement_container {
-    margin: 0 10%;
-    
+    margin: 0 10%;    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -452,11 +548,10 @@ padding: 4% 5%;
     div {
         width: calc(100%/2);       
     }
-    margin: 0 10%;
+    margin: 1% 10%;
 }
 
 .maxi_card_img {
-    
     object-fit: cover;
 }
  
@@ -464,10 +559,8 @@ padding: 4% 5%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: flex-start;
-    
-    padding-left: 6%;
-   
+    align-items: flex-start;    
+    padding-left: 6%;   
 }
 
 
@@ -500,82 +593,127 @@ padding: 4% 5%;
     align-items: center;
     background-color: #0C1B21;   
     padding: 3% 0;
-
+      
 }
 
 
-.top_audio_container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;            
-}
+
 
 .audio_container h3{
-    padding: 3% 0;
+    padding: 1% 0;
 }
 
-.cards_container{     
-    display: flex;
-    justify-content: space-between;
-    align-items: space-around;
-    flex-wrap: wrap;
-   
-    column-gap: 2%;;   
-   
-    padding: 2% 0;
-    height: 500px;    
-    width: 1100px;   
-       
-}
-
-.cta_audio {
+/***Flip cards******/
+.flip_cards_main_container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);   
+    height: 470px;
+    width: 1150px;  
     margin: 2% 0;
+    
+   
+}
+
+.flip_card {
+    width: 200px;
+    height: 200px;
+    display: flex;   
+    justify-content: center;
+}
+
+.flip_card_inner {
+    
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.flip_card:hover .flip_card_inner{
+    transform: rotateY(180deg);
+}
+
+.flip_card_front, .flip_card_back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip_card_front {
+    background-color: transparent;
+    color: black;
+}
+
+.flip_card_back {
+    background-color: rgb(80, 241, 201);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 3%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(141, 40, 96);
+    transform: rotateY(180deg);
+}
+
+.cta_audio {    
     background-color:  $lightgreenBtn;
     border: none; 
     border-radius: 5px;
-    @include btn_cta_audioTxt;     
-    
+    @include btn_cta_audioTxt;  
+    width: 120%;
+    padding: 5% 8%;  
+   
 }
+
+
 
 
 /*Section 4: inscription*******************************************   */
 
-
     .subscription_left_img {
         object-fit: cover;
         width: 100%;
-        position: relative;
-        top: 3px;   
+        //position: relative;
+        //top: 3px;   
     }
-
 
 
 .subscription_container {
     display: flex;
     justify-content: center;   
-    background-color: #8DE969;
-    height: 513px;
-       
+    background-color:$lightgreenBtn;        
 }
 
 .subscription_right {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;             
-    height: 100%;      
-    padding: 0% 8% 0% 5%;
-    width: 560px;
-    
+    align-items: flex-start;                    
+    padding: 0% 5% 0% 2%;
+    width: 560px;    
 }
 
 
 .subscription_right>h2 {
-    @include font_title_nextsound;
     color: $richBlack;
-    text-align: left;
+    text-align: left; 
+    font-family: "Crimson+pro", serif;
+    font-size: 3rem;
+    font-weight: bold;  
     
-}
+    animation: flip 5s infinite;
+    animation-delay: calc(4.5s * var(--i))
+    }
+    @keyframes flip {
+    0%,80% {
+        transform: rotateY(360deg); 
+    }   
+} 
+
 
 .essai {
 @include txt_essai;
@@ -591,8 +729,7 @@ input[placeholder] {
 
 .placeholderTxt {    
     width : 100%;
-    height: 70px;
-        
+    height: 70px;        
 }
 
 .maxi_card_inscription {
@@ -677,8 +814,16 @@ form {
 .footer_right {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    
+    justify-content: space-around;    
     @include footer_right_txt;
+    }
+
+.retour_vers_haut {
+    position: fixed;
+    bottom: 5%;
+    right: 2%;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    @include font_navbar_menu;
 }
 
